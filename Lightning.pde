@@ -2,6 +2,7 @@ int startX = 150;
 int startY = 250;
 int endX = 150;
 int endY = 250;
+int mousepress = 0;
 
 void setup()
 {
@@ -13,6 +14,7 @@ void draw()
 {
 	fill(200,10,50);
 	rect(125,250,50,50);
+	drawLid();
 	fill(150,3,50);
 	noStroke();
 	rect(145,250,10,50);
@@ -29,12 +31,24 @@ void drawLightning()
 		startY = endY;
 	}
 }
-
 void mousePressed()
 {
+	mousepress++
 	startX = 150;
 	startY = 250;
 	endX = 150;
 	endY = 250;
 	drawLightning();
+}
+void drawLid()
+{
+	if (mousepress = 1)
+	{
+		fill(200,10,50);
+		rect(120,250,60,20);
+	}
+	else
+	{
+		
+	}
 }
