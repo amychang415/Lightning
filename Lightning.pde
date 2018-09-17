@@ -33,12 +33,15 @@ void drawLightning()
 }
 void mousePressed()
 {
-	mousepress++
+	mousepress++;
+	if (mousepressed > 1)
+	{
 	startX = 150;
 	startY = 250;
 	endX = 150;
 	endY = 250;
 	drawLightning();
+	}
 }
 void drawLid()
 {
@@ -46,9 +49,5 @@ void drawLid()
 	{
 		fill(200,10,50);
 		rect(120,250,60,20);
-	}
-	else
-	{
-		
 	}
 }
